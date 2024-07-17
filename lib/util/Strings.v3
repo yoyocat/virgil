@@ -146,7 +146,7 @@ component Strings {
 				var p = Utf8.decode1(a[i ... max]);
 				if (p.0 <= 0) return (pos - i, null);
 				else buf.putr(a[i ..+ p.0]);
-				i = p.0 - 1;
+				i += p.0 - 1;
 			} else {
 				buf.putc(ch);
 			}
